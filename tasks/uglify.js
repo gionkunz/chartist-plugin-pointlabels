@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         sourceMapIncludeSources: true
       },
       files: {
-        '<%= pkg.config.dist %>/chartist-plugin-pointlabels.min.js': ['<%= pkg.config.src %>/scripts/chartist-plugin-pointlabels.js']
+        '<%= pkg.config.dist %>/chartist-plugin-pointlabels.min.js': ['<%= pkg.config.dist %>/chartist-plugin-pointlabels.js']
       }
     }
   };

@@ -12,6 +12,7 @@ default:
 build:
   - 'clean:dist'
   - 'copy:dist'
+  - 'umd'
   - 'uglify:dist'
 
 # tests
