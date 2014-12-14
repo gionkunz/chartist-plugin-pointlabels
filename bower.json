@@ -4,8 +4,8 @@
   "main": [
     "./dist/chartist-plugin-pointlabels.min.js"
   ],
-  "devDependencies": {
-    "chartist": "~0.4.2"
+  "dependencies": {
+    "chartist": "~0.5.0"
   },
   "ignore": [
     ".*",
