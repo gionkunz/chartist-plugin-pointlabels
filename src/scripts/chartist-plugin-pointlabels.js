@@ -12,7 +12,8 @@
       x: 0,
       y: -10
     },
-    textAnchor: 'middle'
+    textAnchor: 'middle',
+    labelInterpolationFnc: Chartist.noop
   };
 
   Chartist.plugins = Chartist.plugins || {};
@@ -28,7 +29,7 @@
               x: data.x + options.labelOffset.x,
               y: data.y + options.labelOffset.y,
               style: 'text-anchor: ' + options.textAnchor
-            }, options.labelClass).text(data.value);
+            }, options.labelClass).text(options.labelInterpolationFnc(data.value));
           }
         });
       }
