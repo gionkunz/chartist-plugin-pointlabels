@@ -1,7 +1,7 @@
 {
   "name": "chartist-plugin-pointlabels",
   "description": "Point Labels Plugin for Chartist.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Gion Kunz",
   "homepage": "https://gionkunz.github.io/chartist-plugin-pointlabels",
   "repository": {
