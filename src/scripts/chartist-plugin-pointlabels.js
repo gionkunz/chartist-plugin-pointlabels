@@ -29,7 +29,7 @@
               x: data.x + options.labelOffset.x,
               y: data.y + options.labelOffset.y,
               style: 'text-anchor: ' + options.textAnchor
-            }, options.labelClass).text(options.labelInterpolationFnc(data.value));
+            }, options.labelClass).text(options.labelInterpolationFnc(data.value.x === undefined ? data.value.y : data.value.x + ', ' + data.value.y));
           }
         });
       }
