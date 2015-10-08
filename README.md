@@ -12,7 +12,6 @@ bower install chartist-plugin-pointlabels --save
 ```
 
 ## Available options and their defaults
-bower install chartist-plugin-pointlabes --save
 
 ```javascript
 var defaultOptions = {
