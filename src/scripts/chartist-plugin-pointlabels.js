@@ -22,14 +22,16 @@
     options = Chartist.extend({}, defaultOptions, options);
 
     return function ctPointLabels(chart) {
-      if(chart instanceof Chartist.Line) {
+      if (chart instanceof Chartist.Line) {
         chart.on('draw', function(data) {
-          if(data.type === 'point') {
-            data.group.elem('text', {
-              x: data.x + options.labelOffset.x,
-              y: data.y + options.labelOffset.y,
-              style: 'text-anchor: ' + options.textAnchor
-            }, options.labelClass).text(options.labelInterpolationFnc(data.value.x === undefined ? data.value.y : data.value.x + ', ' + data.value.y));
+          if (data.type === 'point') {
+            if (options.series ? options.series.indexOf(data.series.name) > -1 : true) {
+              data.group.elem('text', {
+                x: data.x + options.labelOffset.x,
+                y: data.y + options.labelOffset.y,
+                style: 'text-anchor: ' + options.textAnchor
+              }, options.labelClass).text(options.labelInterpolationFnc(data.value.x === undefined ? data.value.y : data.value.x + ', ' + data.value.y));
+            }
           }
         });
       }
