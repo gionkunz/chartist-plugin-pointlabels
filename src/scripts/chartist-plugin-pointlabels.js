@@ -13,6 +13,7 @@
       y: -10
     },
     textAnchor: 'middle',
+    'align': 'center',
     labelInterpolationFnc: Chartist.noop
   };
 
@@ -24,19 +25,19 @@
       };
     },
     bar: {
-      start: function(data) {
+      left: function(data) {
         return {
           x: data.x1,
           y: data.y1
         };
       },
-      middle: function(data) {
+      center: function(data) {
         return {
           x: data.x1 + (data.x2 - data.x1) / 2,
           y: data.y1
         };
       },
-      end: function(data) {
+      right: function(data) {
         return {
           x: data.x2,
           y: data.y1
@@ -68,7 +69,7 @@
         case 'Line':
         case 'Bar':
         chart.on('draw', function(data) {
-          var positonCalculator = labelPositionCalculation[data.type] && labelPositionCalculation[data.type][options.textAnchor] || labelPositionCalculation[data.type];
+          var positonCalculator = labelPositionCalculation[data.type] && labelPositionCalculation[data.type][options.align] || labelPositionCalculation[data.type];
           if (positonCalculator) {
             addLabel(positonCalculator(data), data);
           }

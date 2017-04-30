@@ -1,15 +1,15 @@
 {
-  "name": "chartist-plugin-pointlabels",
+  "name": "chartist-plugin-labeledpoints",
   "description": "Point Labels Plugin for Chartist.js",
-  "version": "0.0.4",
-  "author": "Gion Kunz",
-  "homepage": "https://gionkunz.github.io/chartist-plugin-pointlabels",
+  "version": "0.0.5",
+  "author": "Gion Kunz (upgraded by Develoger)",
+  "homepage": "https://github.com/radojesrb/chartist-plugin-pointlabels",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gionkunz/chartist-plugin-pointlabels.git"
+    "url": "https://github.com/radojesrb/chartist-plugin-pointlabels.git"
   },
   "bugs": {
-    "url": "https://github.com/gionkunz/chartist-plugin-pointlabels/issues"
+    "url": "https://github.com/radojesrb/chartist-plugin-pointlabels/issues"
   },
   "keywords": [
     "chartist",
@@ -26,7 +26,7 @@
   "licenses": [
     {
       "type": "WTFPL",
-      "url": "https://github.com/gionkunz/chartist-plugin-pointlabels/blob/master/LICENSE"
+      "url": "https://github.com/radojesrb/chartist-plugin-pointlabels/blob/master/LICENSE"
     }
   ],
   "dependencies": {},
