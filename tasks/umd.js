@@ -15,13 +15,7 @@ module.exports = function (grunt) {
       src: '<%= pkg.config.src %>/scripts/chartist-plugin-pointlabels.js',
       dest: '<%= pkg.config.dist %>/chartist-plugin-pointlabels.js',
       objectToExport: 'Chartist.plugins.ctPointLabels',
-      indent: '  ',
-      deps: {
-        default: ['Chartist'],
-        amd: ['chartist'],
-        cjs: ['chartist'],
-        global: ['Chartist']
-      }
+      indent: '  '
     }
   };
 };
