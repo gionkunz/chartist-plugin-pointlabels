@@ -29,7 +29,7 @@
         y: -10
       },
       textAnchor: 'middle',
-      'align': 'center',
+      align: 'center',
       labelInterpolationFnc: Chartist.noop
     };
 
