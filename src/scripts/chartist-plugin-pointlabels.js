@@ -65,9 +65,7 @@
     }
 
     return function ctPointLabels(chart) {
-      switch (chart.constructor.name) {
-        case 'Line':
-        case 'Bar':
+      if (chart instanceof Chartist.Line || chart instanceof Chartist.Bar) {
         chart.on('draw', function(data) {
           var positonCalculator = labelPositionCalculation[data.type] && labelPositionCalculation[data.type][options.align] || labelPositionCalculation[data.type];
           if (positonCalculator) {
