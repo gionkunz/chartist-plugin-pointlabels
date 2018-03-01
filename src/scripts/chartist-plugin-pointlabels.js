@@ -1,5 +1,5 @@
 /**
- * Chartist.js plugin to display a data label on top of the points in a line chart.
+ * Chartist.js plugin to display a data label on top of the points in a line or bar chart.
  *
  */
 /* global Chartist */
@@ -70,6 +70,16 @@
           var positonCalculator = labelPositionCalculation[data.type] && labelPositionCalculation[data.type][options.align] || labelPositionCalculation[data.type];
           if (positonCalculator) {
             addLabel(positonCalculator(data), data);
+          }
+        });
+      } else if (chart instanceof Chartist.Bar) {
+        chart.on('draw', function (data) {
+          if (data.type === 'bar') {
+            data.group.elem('text', {
+              x: data.x2 + options.labelOffset.x,
+              y: data.y2 + options.labelOffset.y,
+              style: 'text-anchor: ' + options.textAnchor
+            }, options.labelClass).text(options.labelInterpolationFnc(data.value.x === undefined ? data.value.y : data.value.x + ', ' + data.value.y));
           }
         });
       }
