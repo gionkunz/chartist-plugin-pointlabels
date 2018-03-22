@@ -56,7 +56,10 @@
       var value = data.value.x !== undefined && data.value.y ?
         (data.value.x + ', ' + data.value.y) :
         data.value.y || data.value.x;
-
+      // to display zero on the label, not 'undefined'
+      if (typeof value === 'undefined'){
+                value = 0;
+      }
       data.group.elem('text', {
         x: position.x + options.labelOffset.x,
         y: position.y + options.labelOffset.y,
