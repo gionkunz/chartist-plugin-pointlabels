@@ -58,6 +58,18 @@
             x: data.x2,
             y: data.y1
           };
+        },
+        top: function(data) {
+            return {
+                x: data.x1,
+                y: data.y2
+            };
+        },
+        middle: function(data) {
+            return {
+                x: data.x1,
+                y: data.y1 + (data.y2 - data.y1) / 2
+            };
         }
       }
     };
