@@ -71,7 +71,9 @@
         // if x and y exist concat them otherwise output only the existing value
         var value = data.value.x !== undefined && data.value.y ?
           (data.value.x + ', ' + data.value.y) :
-          data.value.y || data.value.x;
+          (data.value.y !== undefined ?
+            data.value.y :
+            data.value.x)
 
         data.group.elem('text', {
           x: position.x + options.labelOffset.x,
