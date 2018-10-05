@@ -32,10 +32,17 @@
         };
       },
       center: function(data) {
-        return {
-          x: data.x1 + (data.x2 - data.x1) / 2,
-          y: data.y1
-        };
+        if ( ((data.y1 - data.y2)+defaultOptions.labelOffset.y) < 0) {
+          return {
+            x: data.x1 + (data.x2 - data.x1) / 2,
+            y: data.y1 - 15
+          };
+        } else {
+          return {
+            x: data.x1 + (data.x2 - data.x1) / 2,
+            y: data.y2
+          };
+        }
       },
       right: function(data) {
         return {
