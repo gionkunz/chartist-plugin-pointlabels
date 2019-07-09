@@ -61,7 +61,7 @@
         x: position.x + options.labelOffset.x,
         y: position.y + options.labelOffset.y,
         style: 'text-anchor: ' + options.textAnchor
-      }, options.labelClass).text(options.labelInterpolationFnc(value));
+      }, options.labelClass).text(options.labelInterpolationFnc(value, data));
     }
 
     return function ctPointLabels(chart) {
