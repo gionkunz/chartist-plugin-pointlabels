@@ -38,7 +38,7 @@ var chart = new Chartist.Line('.ct-chart', {
   plugins: [
     ctPointLabels({
       textAnchor: 'middle',
-      labelInterpolationFnc: function(value) {return '$' + value.toFixed(2)}
+      labelInterpolationFnc: function(value, data) {return '$' + value.toFixed(2)}
     })
   ]
 });
