@@ -28,19 +28,19 @@
       left: function(data) {
         return {
           x: data.x1,
-          y: data.y1
+          y: data.y2
         };
       },
       center: function(data) {
         return {
           x: data.x1 + (data.x2 - data.x1) / 2,
-          y: data.y1
+          y: data.y2
         };
       },
       right: function(data) {
         return {
           x: data.x2,
-          y: data.y1
+          y: data.y2
         };
       }
     }
